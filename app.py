@@ -10,6 +10,12 @@ def pagina_dashboard():
 
 @app.route("/lampada/ligada")
 def post_lampada_ligada():
-    return "pagina em construção"
+    lightResult = "desligada"
+    
+    if lightResult=="desligada":
+        lightResult="ligada"
+    else:
+        lightResult="ligada"
+    return render_template("index.html", lightState = lightResult)
 
-app.run(host="0.0.0.0", port=8080)
+app.run()
