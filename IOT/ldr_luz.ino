@@ -31,7 +31,7 @@ void conectarWiFi() {
 
 String requisitarDados(String rota) {
   HTTPClient http;
-  String url = "https://aguardandorota/lampada/ligada";
+  String url = "https://sensor_luz.onrender/lampada/" + rotaLuz;
   http.begin(url);
   
   int httpResponCode = http.GET();
@@ -72,17 +72,13 @@ void loop() {
 
   // Faz requisição a cada 5 segundos
   if (millis() - zero > 5000) {
-    String jsonRecebido = requisitarDados(rotaLuz);
-    DynamicJsonDocument resultado(1024);
+    Serial.print("LDR: ");
+    Serial.print(valorLuz);
+    Serial.print(" - Estado da lâmpada: ");
+    Serial.println(estadoLuz);
 
-    if (processarJSON(jsonRecebido, resultado)) {
-     
-      String fato = resultado["lampada/ligada"];
-      Serial.print("Resposta da rota /");
-      Serial.print(rotaLuz);
-      Serial.print(": ");
-      Serial.println(fato);
-    }
+    String jsonRecebido = requisitarDados(estadoLuz);
+    DynamicJsonDocument resultado(1024);
 
     zero = millis();
   }
