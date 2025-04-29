@@ -9,7 +9,7 @@ unsigned long zero = 0;
 
 WiFiMulti rede;
 
-int pinoLDR = A0;
+int pinoLDR = 34;
 int valorLuz = 0;
 String rotaLuz = "";
 
@@ -75,9 +75,9 @@ void loop() {
     Serial.print("LDR: ");
     Serial.print(valorLuz);
     Serial.print(" - Estado da lâmpada: ");
-    Serial.println(estadoLuz);
+    Serial.println(rotaLuz);
 
-    String jsonRecebido = requisitarDados(estadoLuz);
+    String jsonRecebido = requisitarDados(rotaLuz);
     DynamicJsonDocument resultado(1024);
 
     zero = millis();
