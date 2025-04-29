@@ -11,7 +11,7 @@ def post_lampada_ligada():
     return jsonify ({"mensagem":"Alterado para LIGADO"})
 
 @app.route("/lampada/desligada")
-def post_lampada_digada():
+def post_lampada_desligada():
     global situacao_sala
     situacao_sala="DESLIGADO"
     return jsonify ({"mensagem":"Alterado para DESLIGADO"})
