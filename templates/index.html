@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
     <title>Sensor Luz</title>
+    <!-- JS -->
+     <script src="/assets/index.js" defer></script>
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header class="header">
+        
         <h1>Monitoramento de Luz</h1>
+
         <nav class="header__barra-navegacao">
             <ul>
                 <li><a href="#home">Início</a></li>
@@ -16,10 +22,20 @@
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
+
     </header>
 
     <!-- Conteudo principal -->
-    <main>
+    <main class="main">
+
+        <form action="">
+            <label class="main__estado_luz">Estado da luz:</label>
+            <button type="submit">Ver</button>
+        </form>
+
+        <div class="main__result" id="result">
+                <span ></span>
+        </div>
 
     </main>
 
