@@ -65,9 +65,9 @@ void loop() {
   
   // Define a rota com base no valor do LDR
   if (valorLuz > 3200) {
-    rotaLuz = "acesa";
+    rotaLuz = "ligada";
   } else {
-    rotaLuz = "apagada";
+    rotaLuz = "desligada";
   }
 
   // Faz requisição a cada 5 segundos
