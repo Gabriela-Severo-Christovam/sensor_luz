@@ -64,10 +64,10 @@ void loop() {
   valorLuz = analogRead(pinoLDR);
   
   // Define a rota com base no valor do LDR
-  if (valorLuz > 500) {
-    rotaLuz = "acesa";
+  if (valorLuz > 3200) {
+    rotaLuz = "ligada";
   } else {
-    rotaLuz = "apagada";
+    rotaLuz = "desligada";
   }
 
   // Faz requisição a cada 5 segundos

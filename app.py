@@ -22,6 +22,8 @@ def get_estado_lampada():
     return jsonify ({"ESTADO_LAMPADA": situacao_sala})
 
 
-
+@app.route("/")
+def pagina_principal():
+    return render_template("index.html")
 
 app.run( host= '0.0.0.0', port=8080)
