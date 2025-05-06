@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, redirect, render_template, request, jsonify
 
 app = Flask(__name__)
@@ -25,3 +26,20 @@ def get_estado_lampada():
 
 
 app.run( host= '0.0.0.0', port=8080)
+=======
+from flask import Flask, render_template
+
+
+app = Flask(__name__)
+
+@app.route('/')
+@app.route("/dashboard")
+def pagina_dashboard():
+    return render_template("index.html")
+
+@app.route("/lampada/ligada")
+def post_lampada_ligada():
+    return "pagina em construção"
+
+app.run()
+>>>>>>> 8bfca9d5562605f78b526baa7f25b0c7861df65b
