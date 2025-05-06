@@ -31,7 +31,7 @@ void conectarWiFi() {
 
 String requisitarDados(String rota) {
   HTTPClient http;
-  String url = "https://sensor_luz.onrender/lampada/" + rotaLuz;
+  String url = "https://sensor-luz.onrender.com/lampada/" + rotaLuz;
   http.begin(url);
   
   int httpResponCode = http.GET();
